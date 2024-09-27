@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import UseStatArray from './UseStatArray';
 import UseStateArrValUpdate from './UseStateArrValUpdate';
+import UseStateToDo from './UseStateToDo';
 
 const UseState = () => {
 
@@ -34,6 +35,7 @@ const UseState = () => {
             </div>
             <UseStatArray />
             <UseStateArrValUpdate />
+            <UseStateToDo />
         </>
     )
 }
