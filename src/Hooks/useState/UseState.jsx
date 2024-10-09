@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import UseStatArray from './UseStatArray';
 import UseStateArrValUpdate from './UseStateArrValUpdate';
 import UseStateToDo from './UseStateToDo';
+import LoginForm from './LoginForm';
+import Counter from './Counter';
 
 const UseState = () => {
 
@@ -33,9 +35,11 @@ const UseState = () => {
                     </div>
                 </div>
             </div>
+            <Counter />
             <UseStatArray />
             <UseStateArrValUpdate />
             <UseStateToDo />
+            <LoginForm />
         </>
     )
 }

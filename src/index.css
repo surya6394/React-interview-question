@@ -12,4 +12,7 @@
     .example{
         @apply flex justify-center pt-10 text-white text-[30px];
     }
+    .input-style {
+        @apply mt-1 p-2 w-full border rounded-sm focus:border-gray-400 ring-1 ring-gray-300 rounded-md;
+    }
 }
