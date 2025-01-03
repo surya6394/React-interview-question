@@ -8,8 +8,19 @@ import Counter from './Hooks/useReducer/Counter';
 import ReactMemo from './Memo/ReactMemo';
 import UseMemoHome from './Hooks/useMemo/UseMemoHome';
 import UseCallback from './Hooks/useCallback/UseCallback';
+import { createBrowserRouter } from 'react-router-dom';
+import Home from './Components/Pages/Home';
+import HOC from './Higher-Order-Component/HOC';
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element: <Home/>
+    },
+  ])
+
   return (
     <>
       <Parant />
@@ -20,6 +31,7 @@ function App() {
       <ReactMemo />
       <UseMemoHome />
       <UseCallback />
+      <HOC />
     </>
   );
 }
