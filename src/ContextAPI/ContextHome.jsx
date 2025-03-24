@@ -3,12 +3,14 @@
 import React from 'react'
 import PageOne from './PageOne'
 import { BioProvider } from './ContextPage'
+import PageTwo from './PageTwo'
 
 const ContextHome = () => {
 
     return (
         <BioProvider>
             <PageOne />
+            <PageTwo />
         </BioProvider>
     )
 }
