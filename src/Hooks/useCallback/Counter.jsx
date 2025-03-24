@@ -5,20 +5,10 @@ const Counter = () => {
 
     const [count, setCount] = useState(0);
 
-    // const increment = () => {
-    //     console.log("Increment function triggered.")
-    //     setCount(count + 1);
-    // }
-
     const increment = useCallback(() => {
         console.log("Increment function triggered.")
         setCount((prev) => prev + 1);
     }, []);
-
-    // const decrement = () => {
-    //     console.log("Decrement function triggered.")
-    //     setCount(count - 1);
-    // }
 
     const decrement = useCallback(() => {
         console.log("Decrement function triggered.")
