@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import Pagination from './Pagination';
 
 const UseEffectAPI = () => {
 
     const [data, setData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [dataPerPage, setDataPerPage] = useState(6);
 
     const getUser = async () => {
         const response = await fetch('https://api.github.com/users')
@@ -13,6 +16,9 @@ const UseEffectAPI = () => {
         getUser();
     }, [])
 
+    const lastPageData = currentPage * dataPerPage;
+    const firstPageData = lastPageData - dataPerPage;
+    const currentData = data?.slice(firstPageData, lastPageData)
     return (
         <>
             <div className='bg-[#30336b]'>
@@ -21,11 +27,11 @@ const UseEffectAPI = () => {
                 </div>
                 <div className='flex mx-20 items-center'>
                     <div className='grid grid-cols-3 gap-10 mt-20'>
-                        {data?.map((item) => {
+                        {currentData?.map((item) => {
                             const { login, avatar_url } = item;
                             return (
                                 <div className='flex items-center bg-gray-50 p-3 rounded-lg gap-5'>
-                                    <img src={avatar_url} alt="" width="32%" height="40%"/>
+                                    <img src={avatar_url} alt="" width="32%" height="40%" />
                                     <div>
                                         <h1 className='text-[22px] font-semibold'>{login}</h1>
                                         <p className='text-[19px] text-gray-700'>My name is Surya.</p>
@@ -49,7 +55,9 @@ const UseEffectAPI = () => {
                         })
                         }
                     </div>
+
                 </div>
+                <Pagination totalData={data?.length} setCurrentPage={setCurrentPage} dataPerPage={dataPerPage} currentPage={currentPage} />
             </div>
         </>
     )

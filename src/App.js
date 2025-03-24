@@ -1,38 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-import { Parant } from './Prop-Drilling/propDrilling';
-import ContextHome from './ContextAPI/ContextHome';
-import UseState from './Hooks/useState/UseState';
-import UseEffectHome from './Hooks/useEffect/UseEffectHome';
-import UseRefHome from './Hooks/useRef/UseRefHome';
-import Sidebar from './Sidebar';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import logo from './logo.svg'
+import './App.css'
+import { Parant } from './Prop-Drilling/propDrilling'
+import ContextHome from './ContextAPI/ContextHome'
+import UseState from './Hooks/useState/UseState'
+import UseEffectHome from './Hooks/useEffect/UseEffectHome'
+import Counter from './Hooks/useReducer/Counter'
+import ReactMemo from './Memo/ReactMemo'
+import UseMemoHome from './Hooks/useMemo/UseMemoHome'
+import UseCallback from './Hooks/useCallback/UseCallback'
+import { createBrowserRouter } from 'react-router-dom'
+import Home from './Components/Pages/Home'
+import HOC from './Higher-Order-Component/HOC'
+import ComponentLifeCycle from './React-LifeCycle-Method/ComponentLifeCycle'
 
-function App() {
+function App () {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home />
+    }
+  ])
+
   return (
     <>
       {/* <Parant />
       <ContextHome />
       <UseState />
       <UseEffectHome />
-      <UseRefHome /> */}
-      <Router>
-        <Routes>
-          <Route
-            path="/*"
-            element={
-              <>
-                <Sidebar />
-                <Routes>
-                  <Route path="/home" element={<></>} />
-                </Routes>
-              </>
-            }
-          />
-        </Routes>
-      </Router>
+      <Counter />
+      <ReactMemo />
+      <UseMemoHome />
+      <UseCallback />
+      <HOC /> */}
+      <ComponentLifeCycle />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
