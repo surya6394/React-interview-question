@@ -13,6 +13,7 @@ import Home from './Components/Pages/Home'
 import HOC from './Higher-Order-Component/HOC'
 import ComponentLifeCycle from './React-LifeCycle-Method/ComponentLifeCycle'
 import SuspenseReact from './Suspense/SuspenseReact'
+import { PortalWeb } from './Portals/PortalWeb'
 
 function App () {
   const router = createBrowserRouter([
@@ -33,8 +34,9 @@ function App () {
       <UseMemoHome />
       <UseCallback />
       <HOC /> */}
-      <ComponentLifeCycle />
-      <SuspenseReact />
+      {/* <ComponentLifeCycle /> */}
+      {/* <SuspenseReact /> */}
+      <PortalWeb />
     </>
   )
 }
