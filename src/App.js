@@ -14,6 +14,7 @@ import HOC from './Higher-Order-Component/HOC'
 import ComponentLifeCycle from './React-LifeCycle-Method/ComponentLifeCycle'
 import SuspenseReact from './Suspense/SuspenseReact'
 import { PortalWeb } from './Portals/PortalWeb'
+import PureComponent from './Pure-Component/PureComponent'
 
 function App () {
   const router = createBrowserRouter([
@@ -36,7 +37,8 @@ function App () {
       <HOC /> */}
       {/* <ComponentLifeCycle /> */}
       {/* <SuspenseReact /> */}
-      <PortalWeb />
+      {/* <PortalWeb /> */}
+      <PureComponent />
     </>
   )
 }
