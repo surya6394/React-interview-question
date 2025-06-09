@@ -15,6 +15,7 @@ import ComponentLifeCycle from './React-LifeCycle-Method/ComponentLifeCycle'
 import SuspenseReact from './Suspense/SuspenseReact'
 import { PortalWeb } from './Portals/PortalWeb'
 import PureComponent from './Pure-Component/PureComponent'
+import ErrorBoundaryHome from './ErrorBoundary/ErrorBoundaryHome'
 
 function App () {
   const router = createBrowserRouter([
@@ -38,7 +39,8 @@ function App () {
       {/* <ComponentLifeCycle /> */}
       {/* <SuspenseReact /> */}
       {/* <PortalWeb /> */}
-      <PureComponent />
+      {/* <PureComponent /> */}
+      <ErrorBoundaryHome />
     </>
   )
 }
